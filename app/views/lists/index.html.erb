@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Watchlist</h1>
+
+  <p><% @lists.each do |list|%>
+    <%= link_to list_path(list) do %>
+      <p><%= list.name %></p>
+    <% end %>
+  <% end %>
+  </p>
+
+  <p><%= link_to "New list", new_list_path %></p>
+</div>
